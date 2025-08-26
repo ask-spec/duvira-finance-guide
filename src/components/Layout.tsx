@@ -176,7 +176,23 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             </div>
           </div>
 
-          <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
+          {/* Legal Disclaimer */}
+          <div className="border-t border-border mt-8 pt-6">
+            <div className="bg-gray-100 rounded-lg p-4 mb-6">
+              <h4 className="font-semibold text-foreground mb-3 text-sm">DŮLEŽITÉ UPOZORNĚNÍ:</h4>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                Tyto webové stránky mají výhradně informativní charakter a neslouží jako finanční nástroj nebo investiční poradenství. 
+                Všechny zde uvedené informace jsou určeny pouze pro vzdělávací účely a nepředstavují doporučení k nákupu, prodeji 
+                nebo držbě jakýchkoli finančních produktů. Neposkytujeme finanční poradenství ani investiční služby prostřednictvím 
+                tohoto webu. Před jakýmkoli finančním rozhodnutím se vždy poraďte s kvalifikovaným finančním poradcem nebo právníkem. 
+                Provozovatel webu nenese odpovědnost za jakékoli ztráty nebo škody vzniklé v důsledku použití informací z těchto stránek. 
+                Všechny investice jsou spojeny s rizikem a minulé výsledky nezaručují budoucí výsledky. Veškeré finanční služby 
+                poskytujeme výhradně na základě individuálních konzultací a písemných smluv v souladu s českými právními předpisy.
+              </p>
+            </div>
+          </div>
+
+          <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
             <p>&copy; 2024 Duvira s.r.o. Všechna práva vyhrazena.</p>
           </div>
         </div>
