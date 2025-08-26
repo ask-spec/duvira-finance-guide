@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
-import Map from "@/components/Map";
+
 
 const ContactPage = () => {
   const { toast } = useToast();
@@ -261,7 +261,7 @@ const ContactPage = () => {
         </div>
       </section>
 
-      {/* Map and Location */}
+      {/* Location Information */}
       <section className="bg-secondary py-16">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4 mb-12">
@@ -273,54 +273,58 @@ const ContactPage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Interactive Map */}
-            <div className="space-y-4">
-              <h3 className="text-xl font-semibold text-foreground">Naše poloha</h3>
-              <Map />
-            </div>
-
-            {/* Location Details */}
-            <div className="space-y-6">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Doprava</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-2">Metro</h4>
-                    <p className="text-muted-foreground">
-                      Linka A - stanice Můstek (5 min chůze)<br />
-                      Linka B - stanice Národní třída (3 min chůze)
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-2">Tramvaj</h4>
-                    <p className="text-muted-foreground">
-                      Linky 2, 8, 9, 14, 18, 22 - zastávka Národní divadlo
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-2">Parkování</h4>
-                    <p className="text-muted-foreground">
-                      Placené parkovací zóny v okolí, doporučujeme MHD
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <CardTitle>Bezbariérový přístup</CardTitle>
-                </CardHeader>
-                <CardContent>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card>
+              <CardHeader>
+                <CardTitle>Doprava</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div>
+                  <h4 className="font-semibold text-foreground mb-2">Metro</h4>
                   <p className="text-muted-foreground">
-                    Naše kancelář je vybavena výtahem a přizpůsobena 
-                    pro osoby s omezenou pohyblivostí.
+                    Linka A - stanice Můstek (5 min chůze)<br />
+                    Linka B - stanice Národní třída (3 min chůze)
                   </p>
-                </CardContent>
-              </Card>
-            </div>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-foreground mb-2">Tramvaj</h4>
+                  <p className="text-muted-foreground">
+                    Linky 2, 8, 9, 14, 18, 22 - zastávka Národní divadlo
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-foreground mb-2">Parkování</h4>
+                  <p className="text-muted-foreground">
+                    Placené parkovací zóny v okolí, doporučujeme MHD
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle>Bezbariérový přístup</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Naše kancelář je vybavena výtahem a přizpůsobena 
+                  pro osoby s omezenou pohyblivostí.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle>Adresa</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Jungmannova 745/24<br />
+                  110 00 Praha 1<br />
+                  Česká republika
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
