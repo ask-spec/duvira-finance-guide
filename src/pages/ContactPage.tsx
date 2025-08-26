@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import Map from "@/components/Map";
 
 const ContactPage = () => {
   const { toast } = useToast();
@@ -273,15 +274,10 @@ const ContactPage = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Map Placeholder */}
-            <div className="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
-              <div className="text-center space-y-2">
-                <MapPin className="h-12 w-12 text-gray-400 mx-auto" />
-                <p className="text-gray-600">Interaktivní mapa</p>
-                <p className="text-sm text-gray-500">
-                  Jungmannova 745/24, Praha 1
-                </p>
-              </div>
+            {/* Interactive Map */}
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">Naše poloha</h3>
+              <Map />
             </div>
 
             {/* Location Details */}
